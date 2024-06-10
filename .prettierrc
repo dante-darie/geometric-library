@@ -1,0 +1,17 @@
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "bracketSameLine": false,
+  "jsxSingleQuote": true,
+  "proseWrap": "never",
+  "printWidth": 240,
+  "quoteProps": "as-needed",
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "useTabs": false,
+  "experimentalTernaries": false,
+  "plugins": ["prettier-plugin-packagejson", "prettier-eslint"]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "geometric-library",
+  "version": "1.0.0",
+  "description": "A Node based, visually agnostic implementation of geometric functions, both abstract and finite.",
+  "keywords": [
+    "geometry",
+    "vector",
+    "2d",
+    "point",
+    "line",
+    "curve"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dante-darie/geometric-library.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Dante Darie",
+    "email": "dante.darie@gmail.com"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx tsc --build --clean",
+    "lint": "npx eslint ./src --ext .js,.ts",
+    "lint:fix": "npx eslint ./src --ext .js,.ts --fix",
+    "prepare": "husky",
+    "prettier": "npx prettier . --write",
+    "test": "vitest --watch false",
+    "test:coverage": "vitest run --coverage --watch false",
+    "test:watch": "vitest --watch true"
+  },
+  "dependencies": {
+    "decimal.js": "^10.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "@typescript-eslint/eslint-plugin": "^7.12.0",
+    "@typescript-eslint/parser": "^7.12.0",
+    "@vitest/coverage-v8": "^1.6.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "husky": "^9.0.11",
+    "prettier": "^3.3.2",
+    "prettier-eslint": "^16.3.0",
+    "prettier-plugin-packagejson": "^2.5.0",
+    "typescript": "^5.1.6",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.6.0"
+  }
+}
