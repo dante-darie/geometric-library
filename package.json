@@ -1,6 +1,6 @@
 {
   "name": "geometric-library",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "A Node based, visually agnostic implementation of geometric functions, both abstract and finite.",
   "keywords": [
     "geometry",
@@ -20,7 +20,7 @@
     "email": "dante.darie@gmail.com"
   },
   "type": "module",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
     "build": "rm -rf dist && tsc --project tsconfig.prod.json && tsc --declaration --emitDeclarationOnly --outDir dist/types src/types/index.ts",
