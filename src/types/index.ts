@@ -10,6 +10,11 @@ export interface IBoundingBox {
   yMin: number;
 }
 
+export interface ISize {
+  height: number;
+  width: number;
+}
+
 export interface IClonable<T> {
   clone(): T;
 }
