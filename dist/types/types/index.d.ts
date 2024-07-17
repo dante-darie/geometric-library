@@ -35,6 +35,7 @@ export interface IAngle extends IClonable<IAngle> {
 }
 export type TAngleRange = [IAngle, IAngle];
 export interface IMagnitude extends IClonable<IMagnitude> {
+    readonly value: number;
     replace(value: number): this;
     scale(factor: number): this;
     valueOf(): number;
@@ -116,7 +117,6 @@ export type TCircleValues = [IPoint, IMagnitude];
 export interface ICircle extends IFigure, IClonable<ICircle> {
     readonly center: IPoint;
     readonly criticalPoints: TEllipseCriticalPoints;
-    readonly phi: IAngle;
     readonly radius: IMagnitude;
 }
 export type TArcAbsoluteValues = [IPoint, IMagnitude, IMagnitude, IAngle, IFlag, IFlag, IPoint];
@@ -139,6 +139,6 @@ export interface IQuadraticBezierCurve extends IFigure, IClonable<IQuadraticBezi
     readonly criticalPoints: IPoint[];
 }
 export type TPolygonValues = [IPoint, IPoint, IPoint, ...IPoint[]];
-export interface IPolygon extends IClonable<IPolygon> {
+export interface IPolygon extends IFigure, IClonable<IPolygon> {
     readonly sides: number;
 }

@@ -4,6 +4,9 @@ export class Magnitude {
     constructor(value) {
         this._value = value;
     }
+    get value() {
+        return this._value;
+    }
     clone() {
         return new Magnitude(+this);
     }

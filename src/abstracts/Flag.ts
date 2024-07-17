@@ -27,7 +27,7 @@ export class Flag implements IFlag {
     return this;
   }
 
-  public valueOf() {
+  public valueOf(): number {
     return +this._value;
   }
 }

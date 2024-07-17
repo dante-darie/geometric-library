@@ -8,6 +8,10 @@ export class Magnitude implements IMagnitude {
     this._value = value;
   }
 
+  public get value(): number {
+    return this._value;
+  }
+
   public clone(): IMagnitude {
     return new Magnitude(+this);
   }
