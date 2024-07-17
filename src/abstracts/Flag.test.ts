@@ -1,4 +1,4 @@
-import { Flag } from 'abstracts/Flag';
+import { Flag } from './Flag';
 
 it('should correctly assign a value', () => {
   const flag = new Flag(false);

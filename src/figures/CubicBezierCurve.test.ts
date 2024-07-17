@@ -1,9 +1,9 @@
-import { TCubicBezierValues } from 'types';
-import { Point } from 'abstracts/Point';
+import { TCubicBezierValues } from '../types';
+import { Point } from '../abstracts/Point';
 import { CubicBezierCurve } from './CubicBezierCurve';
-import { Line } from 'figures/Line';
-import { Vector } from 'abstracts/Vector';
-import { Angle } from 'abstracts/Angle';
+import { Line } from './Line';
+import { Vector } from '../abstracts/Vector';
+import { Angle } from '../abstracts/Angle';
 
 it('should correctly assign the given values', () => {
   const cubicBezierCurve = new CubicBezierCurve([new Point([0, 0]), new Point([5, 5]), new Point([10, -5]), new Point([15, 0])]);

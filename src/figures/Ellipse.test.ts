@@ -1,9 +1,9 @@
-import { Angle } from 'abstracts/Angle';
-import { Magnitude } from 'abstracts/Magnitude';
-import { Point } from 'abstracts/Point';
-import { Vector } from 'abstracts/Vector';
-import { Line } from 'figures/Line';
-import { Ellipse } from 'figures/Ellipse';
+import { Angle } from '../abstracts/Angle';
+import { Magnitude } from '../abstracts/Magnitude';
+import { Point } from '../abstracts/Point';
+import { Vector } from '../abstracts/Vector';
+import { Line } from './Line';
+import { Ellipse } from './Ellipse';
 
 it('should correctly assign the given values', () => {
   const phi = new Angle(90, 'degrees');

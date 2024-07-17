@@ -1,7 +1,7 @@
-import { IAngle, IBoundingBox, ILine, IPoint, IQuadraticBezierCurve, IVector, TAxii, TAxis, TQuadraticBezierValues } from 'types';
-import { Calculator } from 'utilities/Calculator';
-import { Point } from 'abstracts/Point';
-import { Figure } from 'abstracts/Figure';
+import { IAngle, IBoundingBox, ILine, IPoint, IQuadraticBezierCurve, IVector, TAxii, TAxis, TQuadraticBezierValues } from '../types';
+import { Calculator } from '../utilities/Calculator';
+import { Point } from '../abstracts/Point';
+import { Figure } from '../abstracts/Figure';
 
 export class QuadraticBezierCurve extends Figure implements IQuadraticBezierCurve {
   private _criticalPoints: IPoint[];

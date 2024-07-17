@@ -1,6 +1,6 @@
-import { Calculator } from 'utilities/Calculator';
-import { Point } from 'abstracts/Point';
-import { Line } from 'figures/Line';
+import { Calculator } from './Calculator';
+import { Point } from '../abstracts/Point';
+import { Line } from '../figures/Line';
 
 export const coordinateOrigin = new Point([0, 0]);
 

@@ -1,8 +1,8 @@
-import { IAngle, IArcCurve, IBoundingBox, IEllipse, ILine, IMagnitude, IPoint, TAngleRange, TArcValues, IFlag } from 'types';
-import { Calculator } from 'utilities/Calculator';
-import { Point } from 'abstracts/Point';
-import { Figure } from 'abstracts/Figure';
-import { Ellipse } from 'figures/Ellipse';
+import { IAngle, IArcCurve, IBoundingBox, IEllipse, ILine, IMagnitude, IPoint, TAngleRange, TArcValues, IFlag } from '../types';
+import { Calculator } from '../utilities/Calculator';
+import { Point } from '../abstracts/Point';
+import { Figure } from '../abstracts/Figure';
+import { Ellipse } from './Ellipse';
 
 export class ArcCurve extends Figure implements IArcCurve {
   private ellipse: IEllipse;

@@ -1,5 +1,5 @@
-import { TSegment, TVectorValues } from 'types';
-import { Angle } from 'abstracts/Angle';
+import { TSegment, TVectorValues } from '../types';
+import { Angle } from './Angle';
 import { Vector } from './Vector';
 import { Point } from './Point';
 

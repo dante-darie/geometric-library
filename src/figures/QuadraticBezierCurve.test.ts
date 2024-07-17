@@ -1,8 +1,8 @@
-import { IPoint } from 'types';
-import { Angle } from 'abstracts/Angle';
-import { Point } from 'abstracts/Point';
-import { Vector } from 'abstracts/Vector';
-import { Line } from 'figures/Line';
+import { IPoint } from '../types';
+import { Angle } from '../abstracts/Angle';
+import { Point } from '../abstracts/Point';
+import { Vector } from '../abstracts/Vector';
+import { Line } from './Line';
 import { QuadraticBezierCurve } from './QuadraticBezierCurve';
 
 it('should correctly assign the given values', () => {

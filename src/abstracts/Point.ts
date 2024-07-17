@@ -1,5 +1,5 @@
-import { IAngle, IPoint, IVector, TPointValues } from 'types';
-import { Calculator } from 'utilities/Calculator';
+import { IAngle, IPoint, IVector, TPointValues } from '../types';
+import { Calculator } from '../utilities/Calculator';
 
 export class Point implements IPoint {
   private _x: number;

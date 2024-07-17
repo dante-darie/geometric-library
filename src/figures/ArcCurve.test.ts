@@ -1,11 +1,11 @@
-import { Point } from 'abstracts/Point';
+import { Point } from '../abstracts/Point';
 import { ArcCurve } from './ArcCurve';
-import { Magnitude } from 'abstracts/Magnitude';
-import { Angle } from 'abstracts/Angle';
-import { TArcAbsoluteValues } from 'types';
-import { Flag } from 'abstracts/Flag';
-import { Line } from 'figures/Line';
-import { Vector } from 'abstracts/Vector';
+import { Magnitude } from '../abstracts/Magnitude';
+import { Angle } from '../abstracts/Angle';
+import { TArcAbsoluteValues } from '../types';
+import { Flag } from '../abstracts/Flag';
+import { Line } from './Line';
+import { Vector } from '../abstracts/Vector';
 
 it('should correctly assign the given values', () => {
   const arcCurve = new ArcCurve([new Point([0, 0]), new Magnitude(5), new Magnitude(10), new Angle(0, 'degrees'), new Flag(false), new Flag(false), new Point([10, 0])]);

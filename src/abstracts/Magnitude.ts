@@ -1,5 +1,5 @@
-import { IMagnitude } from 'types';
-import { Calculator } from 'utilities/Calculator';
+import { IMagnitude } from '../types';
+import { Calculator } from '../utilities/Calculator';
 
 export class Magnitude implements IMagnitude {
   private _value: number;

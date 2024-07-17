@@ -1,4 +1,4 @@
-import { IFlag } from 'types';
+import { IFlag } from '../types';
 
 export class Flag implements IFlag {
   private _value: boolean;

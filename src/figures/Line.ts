@@ -1,9 +1,9 @@
-import { IAngle, ILine, IPoint, IVector, TLineValues } from 'types';
-import { Calculator } from 'utilities/Calculator';
-import { Angle } from 'abstracts/Angle';
-import { Point } from 'abstracts/Point';
-import { Vector } from 'abstracts/Vector';
-import { Figure } from 'abstracts/Figure';
+import { IAngle, ILine, IPoint, IVector, TLineValues } from '../types';
+import { Calculator } from '../utilities/Calculator';
+import { Angle } from '../abstracts/Angle';
+import { Point } from '../abstracts/Point';
+import { Vector } from '../abstracts/Vector';
+import { Figure } from '../abstracts/Figure';
 
 export class Line extends Figure implements ILine {
   private _P0: IPoint;

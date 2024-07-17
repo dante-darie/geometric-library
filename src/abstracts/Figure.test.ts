@@ -1,10 +1,10 @@
-import { IMagnitude, IPoint, IVector, TFigureValues } from 'types';
-import { Angle } from 'abstracts/Angle';
-import { Magnitude } from 'abstracts/Magnitude';
-import { Point } from 'abstracts/Point';
-import { Vector } from 'abstracts/Vector';
-import { Figure } from 'abstracts/Figure';
-import { yAxis } from 'utilities';
+import { IMagnitude, IPoint, IVector, TFigureValues } from '../types';
+import { Angle } from './Angle';
+import { Magnitude } from './Magnitude';
+import { Point } from './Point';
+import { Vector } from './Vector';
+import { Figure } from './Figure';
+import { yAxis } from '../utilities';
 
 class SpecificFigure extends Figure {
   constructor(values: TFigureValues) {

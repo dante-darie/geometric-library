@@ -1,8 +1,8 @@
-import { IAngle, IBoundingBox, IFigure, ILine, IMagnitude, IPoint, IVector, TFigureValues } from 'types';
-import { Calculator } from 'utilities/Calculator';
-import { Magnitude } from 'abstracts/Magnitude';
-import { Point } from 'abstracts/Point';
-import { Vector } from 'abstracts/Vector';
+import { IAngle, IBoundingBox, IFigure, ILine, IMagnitude, IPoint, IVector, TFigureValues } from '../types';
+import { Calculator } from '../utilities/Calculator';
+import { Magnitude } from './Magnitude';
+import { Point } from './Point';
+import { Vector } from './Vector';
 
 export abstract class Figure implements IFigure {
   protected angles: IAngle[] = [];

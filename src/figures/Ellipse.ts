@@ -1,9 +1,9 @@
-import { TEllipseValues, IBoundingBox, IPoint, IEllipse, TEllipseCriticalPoints, IMagnitude, IVector, ILine, IAngle } from 'types';
-import { Calculator } from 'utilities/Calculator';
-import { Angle } from 'abstracts/Angle';
-import { Point } from 'abstracts/Point';
-import { Figure } from 'abstracts/Figure';
-import { xAxis } from 'utilities';
+import { TEllipseValues, IBoundingBox, IPoint, IEllipse, TEllipseCriticalPoints, IMagnitude, IVector, ILine, IAngle } from '../types';
+import { Calculator } from '../utilities/Calculator';
+import { Angle } from '../abstracts/Angle';
+import { Point } from '../abstracts/Point';
+import { Figure } from '../abstracts/Figure';
+import { xAxis } from '../utilities';
 
 export class Ellipse extends Figure implements IEllipse {
   private _center: IPoint;

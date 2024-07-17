@@ -1,9 +1,9 @@
-import { TCircleValues } from 'types';
-import { Magnitude } from 'abstracts/Magnitude';
-import { Angle } from 'abstracts/Angle';
-import { Point } from 'abstracts/Point';
-import { Vector } from 'abstracts/Vector';
-import { Line } from 'figures/Line';
+import { TCircleValues } from '../types';
+import { Magnitude } from '../abstracts/Magnitude';
+import { Angle } from '../abstracts/Angle';
+import { Point } from '../abstracts/Point';
+import { Vector } from '../abstracts/Vector';
+import { Line } from './Line';
 import { Circle } from './Circle';
 
 it('should correctly assign the given values', () => {

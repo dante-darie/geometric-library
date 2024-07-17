@@ -1,4 +1,4 @@
-import { Magnitude } from 'abstracts/Magnitude';
+import { Magnitude } from './Magnitude';
 
 it('should correctly assign a value', () => {
   const magnitude = new Magnitude(6);

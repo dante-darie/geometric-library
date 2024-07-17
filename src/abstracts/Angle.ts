@@ -1,5 +1,5 @@
-import { IAngle, TAngleUnit } from 'types';
-import { Calculator } from 'utilities/Calculator';
+import { IAngle, TAngleUnit } from '../types';
+import { Calculator } from '../utilities/Calculator';
 
 const PI2 = +Calculator.mul(Math.PI, 2);
 

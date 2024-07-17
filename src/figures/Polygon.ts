@@ -1,5 +1,5 @@
-import { IPolygon, TPolygonValues } from 'types';
-import { Figure } from 'abstracts/Figure';
+import { IPolygon, TPolygonValues } from '../types';
+import { Figure } from '../abstracts/Figure';
 
 export class Polygon extends Figure implements IPolygon {
   constructor(values: TPolygonValues) {

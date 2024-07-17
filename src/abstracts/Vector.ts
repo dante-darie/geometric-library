@@ -1,6 +1,6 @@
-import { IVector, TVectorValues, TSegment, IAngle } from 'types';
-import { Calculator } from 'utilities/Calculator';
-import { Angle } from 'abstracts/Angle';
+import { IVector, TVectorValues, TSegment, IAngle } from '../types';
+import { Calculator } from '../utilities/Calculator';
+import { Angle } from './Angle';
 
 export class Vector implements IVector {
   private _dx: number;

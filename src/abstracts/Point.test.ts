@@ -1,5 +1,5 @@
-import { TPointValues } from 'types';
-import { Angle } from 'abstracts/Angle';
+import { TPointValues } from '../types';
+import { Angle } from './Angle';
 import { Point } from './Point';
 import { Vector } from './Vector';
 

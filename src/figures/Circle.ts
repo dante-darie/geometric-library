@@ -1,8 +1,8 @@
-import { ICircle, IEllipse, IMagnitude, TCircleValues, TEllipseCriticalPoints, TFigureValues } from 'types';
-import { Calculator } from 'utilities/Calculator';
-import { Ellipse } from 'figures/Ellipse';
-import { Point } from 'abstracts/Point';
-import { Angle } from 'abstracts/Angle';
+import { ICircle, IEllipse, IMagnitude, TCircleValues, TEllipseCriticalPoints, TFigureValues } from '../types';
+import { Calculator } from '../utilities/Calculator';
+import { Ellipse } from './Ellipse';
+import { Point } from '../abstracts/Point';
+import { Angle } from '../abstracts/Angle';
 
 export class Circle extends Ellipse implements ICircle {
   private _radius: IMagnitude;

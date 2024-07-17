@@ -1,8 +1,8 @@
-import { TPolygonValues } from 'types';
-import { Angle } from 'abstracts/Angle';
-import { Point } from 'abstracts/Point';
-import { Vector } from 'abstracts/Vector';
-import { Line } from 'figures/Line';
+import { TPolygonValues } from '../types';
+import { Angle } from '../abstracts/Angle';
+import { Point } from '../abstracts/Point';
+import { Vector } from '../abstracts/Vector';
+import { Line } from './Line';
 import { Polygon } from './Polygon';
 
 it('should correctly assign the given values', () => {

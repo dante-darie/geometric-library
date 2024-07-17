@@ -19,11 +19,15 @@
     "name": "Dante Darie",
     "email": "dante.darie@gmail.com"
   },
-  "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist && tsc --project tsconfig.prod.json && tsc --declaration --emitDeclarationOnly --outDir dist/types src/types/index.ts",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist/types",
+    "clean": "rm -rf dist",
     "lint": "npx eslint ./src --ext .js,.ts",
     "lint:fix": "npx eslint ./src --ext .js,.ts --fix",
     "prepare": "husky",
