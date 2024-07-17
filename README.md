@@ -4,7 +4,7 @@ A Node based, visually agnostic implementation of geometric functions, both abst
 
 ## Prerequisites
 
-This library assumes you already have basic knowledge of concepts pertaining to algebra and geometry, including:
+This library assumes you already have basic knowledge of geometric concepts, including:
 
 - **Abstracts**: magnitude, direction, position, coordinate, vector, point, figure, angle
 - **Figures**: line, curve, ellipse, polygon
@@ -19,7 +19,7 @@ You may install this library into your JavaScript or TypeScript project using th
 npm install geometric-library
 ```
 
-You may then `import` (ESM) any of the classes listed in the **API** section and use them at your own discretion:
+You may then `import` (ESM) any of the classes listed in the **API** section:
 
 ```javascript
 import { Point } from 'geometric-library';
@@ -31,7 +31,7 @@ Alternatively if you're using CommonJS in your project instead of ESM, you may `
 const { Point } = require('geometric-library');
 ```
 
-If you're using TypeScript for your project you can also `import` types and interfaces for all the exported functionalities, which is very much recommended as it will make your life easier in terms of understading how everything works.
+If you're using TypeScript for your project you can also `import` types and interfaces for all the exported functionalities, which is recommended as it will make your life easier in terms of understading how everything works.
 
 ```javascript
 import { IPoint, TPointValues } from 'geometric-library';
@@ -41,21 +41,23 @@ import { IPoint, TPointValues } from 'geometric-library';
 
 #### Decimal.js
 
-JavaScript is bad at math. Don't hate me for saying it, it's actually a pretty well known fact that JavaScript just struggles with algebra, especially when it involves floating point numbers. Here's one of the many articles about it if you want to learn more: [Why JavaScript is Bad At Math](https://javascript.plainenglish.io/why-javascript-is-bad-at-math-9b8247640caa) (by Alexandra Langton).
+JavaScript is bad at math. Don't hate me for saying it, it's actually a pretty well known fact that JavaScript just struggles with even simple calculations and especially when they involve floating point numbers. Here's one of the many articles about it if you want to learn more: [Why JavaScript is Bad At Math](https://javascript.plainenglish.io/why-javascript-is-bad-at-math-9b8247640caa), by Alexandra Langton.
 
-Though there are ways to combat these issues natively, for this library I chose to use an abstraction of [Decimal.js](https://mikemcl.github.io/decimal.js/), which does just that pretty efficiently.
+Though there are ways to more or less combat these issues natively, for the purposes of this library I chose to use an abstraction of [Decimal.js](https://mikemcl.github.io/decimal.js/), which does just that pretty efficiently.
 
-As it is an intrinsic dependency you don't have to install anything yourself.
+Note: You do NOT have to install Decimal.js, as it's included with this library.
 
 ## Contributing
 
 This project is open to contribution.
 
-If you have a bug to report please open an issue so it can be tracked and addressed as soon as possible. Do include information about how to reproduce the bug, the expected result and the actual result.
+If you have found a bug please open an issue so it can be tracked and addressed as soon as possible. Please include information about how to reproduce it as well as the expected result and the actual result.
 
-If there's a missing feature feel free to open an issue as well detailing the feature request and its value to the project and its users.
+If you believe there's a missing feature feel free to open an issue as well detailing the feature request and its value to the users of this library.
 
-If you already have an idea of how to fix an issue or implement a feature, please also feel free to directly contribute by opening a pull request with the changes. Though the project includes some automated scripts for linting, cleaning, building, testing and deploying the code, please do try to adhere to the existing standards in terms of naming, directory structure and SOLID principles.
+If you want to directly contribute to the library, feel free to do so by opening a pull request with your changes, as long as there's a related issue tracking the bug/feature request.
+
+On the note of directly contributing, though the project includes some automated scripts for linting, cleaning, building, testing and deploying the code, please do try to adhere to the existing standards in terms of naming, directory structure and principles (solid, kiss, single source of truth, etc).
 
 ## References
 
@@ -99,7 +101,7 @@ const flag = new Flag(false);
 
 #### Angle
 
-`Angle` implements the geometric concept of angle along with multiple trigonometric operations and pertinent transformations. It can be initialized with a value either `degrees` or `radians` without any difference, as it keeps a single internal source of truth.
+`Angle` implements the geometric concept of angle along with multiple trigonometric operations and pertinent transformations. It can be initialized with a value in either `degrees` or `radians` without presenting any differences, as it keeps a single internal source of truth.
 
 ```javascript
 // constructor
