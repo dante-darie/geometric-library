@@ -1,0 +1,35 @@
+import { IAngle, IFigure, IPoint, IVector } from '@abstracts';
+import { IClonable } from '@types';
+
+export type TSegment = [IPoint, IPoint];
+
+export type TLineRelativeValues = [IPoint, IVector];
+
+export type TLineAbsoluteValues = [IPoint, IPoint];
+
+export type TLineValues = TLineAbsoluteValues | TLineRelativeValues;
+
+export interface ILine extends IFigure, IClonable<ILine> {
+  readonly P0: IPoint;
+  readonly P1: IPoint;
+  readonly V: IVector;
+  readonly a: number;
+  readonly b: number;
+  readonly c: number;
+  readonly isHorizontal: boolean;
+  readonly isVertical: boolean;
+  readonly reciprocal: number | undefined;
+  readonly slope: number | undefined;
+  readonly xIntercept: number | undefined;
+  readonly yIntercept: number | undefined;
+  angleTo(reference: ILine | IVector): IAngle;
+  getIntersectionPoint(line: ILine): IPoint | undefined;
+  getPerpendicularProjection(point: IPoint): IPoint;
+  getPerpendicularThrough(point: IPoint): ILine;
+  getPointAtParameter(t: number): IPoint;
+  getXValueAtY(y: number): number | undefined;
+  getYValueAtX(x: number): number | undefined;
+  hasPoint(point: IPoint): boolean;
+  isParallelTo(line: ILine): boolean;
+  isPerpendicularTo(line: ILine): boolean;
+}
