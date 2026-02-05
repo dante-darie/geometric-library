@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dante-darie/geometric-library/compare/v1.0.4...v1.1.0) (2026-02-05)
+
+
+### Features
+
+* Added lines getter to Polygon ([774c016](https://github.com/dante-darie/geometric-library/commit/774c01685904da5df3ce8107026e1b090b6f5f73))
+
 ## [1.0.4](https://github.com/dante-darie/geometric-library/compare/v1.0.3...v1.0.4) (2026-02-05)
 
 
