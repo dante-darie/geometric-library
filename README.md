@@ -50,8 +50,8 @@ const pointB = new Point([5, 5]);
 const line = new Line([pointA, pointB]);
 
 // Check line properties
-console.log(line.slope);       // 1
-console.log(line.yIntercept);  // 0
+console.log(line.slope); // 1
+console.log(line.yIntercept); // 0
 
 // Transform with chaining
 const vector = new Vector([2, 3]);

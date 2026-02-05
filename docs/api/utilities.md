@@ -11,8 +11,8 @@
 ### Constants
 
 ```javascript
-Calculator.EPSILON  // 1e-8 - threshold for snapping to integers and equality checks
-Calculator.PI2      // 2 * Math.PI (360 degrees in radians)
+Calculator.EPSILON; // 1e-8 - threshold for snapping to integers and equality checks
+Calculator.PI2; // 2 * Math.PI (360 degrees in radians)
 ```
 
 ### Static Methods
@@ -63,7 +63,7 @@ Calculator.min(args): Calculator     // Minimum of an array of values
 Calculator instances support the same operations as instance methods, allowing chained computation:
 
 ```javascript
-new Calculator(5).add(3).mul(2)  // (5 + 3) * 2
+new Calculator(5).add(3).mul(2); // (5 + 3) * 2
 ```
 
 Instance methods: `abs`, `acos`, `add`, `atan`, `atan2`, `cos`, `div`, `mod`, `mul`, `neg`, `pow`, `sin`, `sqrt`, `sub`, `tan`, `isFinite`.
@@ -118,7 +118,7 @@ The y-axis, defined as a line from the origin through `[0, 1]`.
 const PI2: number = Calculator.PI2; // ~6.283185307179586
 ```
 
-The constant 2*PI, representing 360 degrees in radians.
+The constant 2\*PI, representing 360 degrees in radians.
 
 ---
 

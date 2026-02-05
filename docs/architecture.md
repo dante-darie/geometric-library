@@ -49,10 +49,18 @@ Every abstract class has a `readonly kind` string literal property (`'point'`, `
 
 ```typescript
 switch (value.kind) {
-  case 'point':     result[0].push(value); break;
-  case 'vector':    result[1].push(value); break;
-  case 'magnitude': result[2].push(value); break;
-  case 'angle':     result[3].push(value); break;
+  case 'point':
+    result[0].push(value);
+    break;
+  case 'vector':
+    result[1].push(value);
+    break;
+  case 'magnitude':
+    result[2].push(value);
+    break;
+  case 'angle':
+    result[3].push(value);
+    break;
 }
 ```
 
@@ -98,6 +106,7 @@ line.scale(2).rotate(angle);
 All math goes through the `Calculator` class, which wraps Decimal.js. After every operation, `roundDecimalWithPrecision` checks if the result is within `EPSILON` (1e-8) of the nearest integer and snaps to it. This eliminates floating-point artifacts.
 
 Comparisons use:
+
 - `Calculator.isEqual(a, b)` - checks `|a - b| <= EPSILON`
 - `Calculator.isNearZero(a)` - checks `|a| <= EPSILON`
 
@@ -105,13 +114,14 @@ Comparisons use:
 
 Three separate TypeScript configurations produce different output formats:
 
-| Config | Output | Format |
-|---|---|---|
-| `tsconfig.cjs.json` | `dist/cjs/` | CommonJS |
-| `tsconfig.esm.json` | `dist/esm/` | ES Modules |
+| Config                | Output        | Format                 |
+| --------------------- | ------------- | ---------------------- |
+| `tsconfig.cjs.json`   | `dist/cjs/`   | CommonJS               |
+| `tsconfig.esm.json`   | `dist/esm/`   | ES Modules             |
 | `tsconfig.types.json` | `dist/types/` | Declaration files only |
 
 The `package.json` maps these:
+
 - `main` -> `dist/cjs/index.js` (CommonJS entry)
 - `module` -> `dist/esm/index.js` (ESM entry)
 - `types` -> `dist/types/index.d.ts` (TypeScript declarations)
