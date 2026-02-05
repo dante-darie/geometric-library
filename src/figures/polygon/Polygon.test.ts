@@ -23,6 +23,32 @@ it('should correctly compute its bounding box', () => {
   });
 });
 
+it('should correctly compute its lines', () => {
+  const polygon = new Polygon([new Point([0, 0]), new Point([5, 5]), new Point([10, 0])]);
+  const lines = polygon.lines;
+
+  expect(lines).toHaveLength(3);
+  expect(lines[0].P0.values).toStrictEqual([0, 0]);
+  expect(lines[0].P1.values).toStrictEqual([5, 5]);
+  expect(lines[1].P0.values).toStrictEqual([5, 5]);
+  expect(lines[1].P1.values).toStrictEqual([10, 0]);
+  expect(lines[2].P0.values).toStrictEqual([10, 0]);
+  expect(lines[2].P1.values).toStrictEqual([0, 0]);
+});
+
+it('should recompute its lines after translation', () => {
+  const polygon = new Polygon([new Point([0, 0]), new Point([5, 5]), new Point([10, 0])]);
+
+  polygon.translate(new Vector([5, 5]));
+
+  const lines = polygon.lines;
+
+  expect(lines[0].P0.values).toStrictEqual([5, 5]);
+  expect(lines[0].P1.values).toStrictEqual([10, 10]);
+  expect(lines[2].P0.values).toStrictEqual([15, 5]);
+  expect(lines[2].P1.values).toStrictEqual([5, 5]);
+});
+
 it('should correctly compute its number of sides', () => {
   const polygon = new Polygon([new Point([0, 0]), new Point([5, 5]), new Point([10, 0])]);
 
