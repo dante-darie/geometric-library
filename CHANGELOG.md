@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/dante-darie/geometric-library/compare/v1.0.0...v1.0.1) (2026-02-05)
+
+
+### Bug Fixes
+
+* broken ci/cd publish step ([6b900a2](https://github.com/dante-darie/geometric-library/commit/6b900a2859778d0627b64acb1600b3320e721785))
+
 # 1.0.0 (2026-02-05)
 
 
