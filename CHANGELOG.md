@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/dante-darie/geometric-library/compare/v1.0.2...v1.0.3) (2026-02-05)
+
+
+### Bug Fixes
+
+* removed dist from tracking ([e1805ac](https://github.com/dante-darie/geometric-library/commit/e1805ac5dcef35a118661991d76c678d322bb357))
+
 ## [1.0.2](https://github.com/dante-darie/geometric-library/compare/v1.0.1...v1.0.2) (2026-02-05)
 
 
