@@ -32,7 +32,7 @@ export default [
       ]
     },
     rules: {
-      'indent': ['warn', 2, { SwitchCase: 1 }],
+      indent: ['warn', 2, { SwitchCase: 1 }],
       'no-unused-vars': 'off',
       'no-case-declarations': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
@@ -56,8 +56,8 @@ export default [
           }
         }
       ],
-      'quotes': 'off',
-      'semi': ['error', 'always'],
+      quotes: 'off',
+      semi: ['error', 'always'],
       'multiline-ternary': 'off',
       'eol-last': ['error', 'always'],
       'no-trailing-spaces': 'error',
