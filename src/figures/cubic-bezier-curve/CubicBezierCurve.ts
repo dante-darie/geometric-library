@@ -103,7 +103,7 @@ export class CubicBezierCurve extends Figure implements ICubicBezierCurve {
     const criticalPoints = tValues.reduce((criticalPoints, t) => {
       const criticalPoint = this.getPointAtParameter(t);
 
-      criticalPoint && criticalPoints.push(criticalPoint);
+      if (criticalPoint) criticalPoints.push(criticalPoint);
 
       return criticalPoints;
     }, [] as IPoint[]);

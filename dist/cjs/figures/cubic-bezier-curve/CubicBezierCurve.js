@@ -72,7 +72,8 @@ class CubicBezierCurve extends _abstracts_1.Figure {
         }
         const criticalPoints = tValues.reduce((criticalPoints, t) => {
             const criticalPoint = this.getPointAtParameter(t);
-            criticalPoint && criticalPoints.push(criticalPoint);
+            if (criticalPoint)
+                criticalPoints.push(criticalPoint);
             return criticalPoints;
         }, []);
         return criticalPoints;
