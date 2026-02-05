@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/dante-darie/geometric-library/compare/v1.0.3...v1.0.4) (2026-02-05)
+
+
+### Bug Fixes
+
+* unresolved build path aliases ([13ec6d7](https://github.com/dante-darie/geometric-library/commit/13ec6d70c7439eab4ef3fc130884919acbdea520))
+
 ## [1.0.3](https://github.com/dante-darie/geometric-library/compare/v1.0.2...v1.0.3) (2026-02-05)
 
 
