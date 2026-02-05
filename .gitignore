@@ -128,4 +128,8 @@ out
 .yarn/install-state.gz
 .pnp.*
 
+<<<<<<< Updated upstream
 .claude
+=======
+dist/
+>>>>>>> Stashed changes
