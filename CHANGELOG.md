@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/dante-darie/geometric-library/compare/v1.0.1...v1.0.2) (2026-02-05)
+
+
+### Bug Fixes
+
+* npm version out of order ([2b31d3a](https://github.com/dante-darie/geometric-library/commit/2b31d3a7edb5d2f31103eaf02810e217abbc03e5))
+
 ## [1.0.1](https://github.com/dante-darie/geometric-library/compare/v1.0.0...v1.0.1) (2026-02-05)
 
 
