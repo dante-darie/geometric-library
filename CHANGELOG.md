@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/dante-darie/geometric-library/compare/v1.4.0...v1.5.0) (2026-02-06)
+
+
+### Features
+
+* added provenance and removed unused imports ([b8d2a83](https://github.com/dante-darie/geometric-library/commit/b8d2a833248d8683904a5e53b7981fbe0ab78f1a))
+
 # [1.4.0](https://github.com/dante-darie/geometric-library/compare/v1.3.1...v1.4.0) (2026-02-06)
 
 
