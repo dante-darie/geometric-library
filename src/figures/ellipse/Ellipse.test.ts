@@ -1,5 +1,6 @@
-import { Angle, Magnitude, Point, Vector } from '@abstracts';
-import { Ellipse, Line } from '@figures';
+import { Angle, IPoint, Magnitude, Point, Vector } from '@abstracts';
+import { Ellipse, Line, TCubicBezierAbsoluteValues } from '@figures';
+import { Calculator } from '@utilities/calculator';
 
 it('should correctly assign the given values', () => {
   const phi = new Angle(90, 'degrees');
@@ -146,6 +147,53 @@ it('should correctly reflect about a line', () => {
     [-10, -15]
   ]);
 });
+
+// TO CUBIC BEZIER CURVES
+
+it('should produce 4 cubic bezier curves', () => {
+  const ellipse = new Ellipse([new Point([0, 0]), new Magnitude(5), new Magnitude(3), new Angle(0, 'radians')]);
+  const curves = ellipse.toCubicBezierCurves();
+
+  expect(curves).toHaveLength(4);
+});
+
+it('should produce continuous curves', () => {
+  const ellipse = new Ellipse([new Point([0, 0]), new Magnitude(5), new Magnitude(3), new Angle(45, 'degrees')]);
+  const curves = ellipse.toCubicBezierCurves();
+
+  for (let i = 0; i < curves.length; i++) {
+    const endPoint = (curves[i].values as TCubicBezierAbsoluteValues)[3];
+    const startPoint = (curves[(i + 1) % curves.length].values as TCubicBezierAbsoluteValues)[0];
+
+    expect(Calculator.isEqual(endPoint.x, startPoint.x)).toBe(true);
+    expect(Calculator.isEqual(endPoint.y, startPoint.y)).toBe(true);
+  }
+});
+
+it('should start and end at the correct ellipse points', () => {
+  const ellipse = new Ellipse([new Point([10, 10]), new Magnitude(8), new Magnitude(5), new Angle(0, 'radians')]);
+  const curves = ellipse.toCubicBezierCurves();
+  const firstStart = (curves[0].values as TCubicBezierAbsoluteValues)[0];
+  const lastEnd = (curves[3].values as TCubicBezierAbsoluteValues)[3];
+  const expectedPoint = ellipse.computePointForTheta(new Angle(0, 'radians'));
+
+  expect(Calculator.isEqual(firstStart.x, expectedPoint.x)).toBe(true);
+  expect(Calculator.isEqual(firstStart.y, expectedPoint.y)).toBe(true);
+  expect(Calculator.isEqual(lastEnd.x, expectedPoint.x)).toBe(true);
+  expect(Calculator.isEqual(lastEnd.y, expectedPoint.y)).toBe(true);
+});
+
+it('should correctly handle a rotated ellipse', () => {
+  const ellipse = new Ellipse([new Point([0, 0]), new Magnitude(10), new Magnitude(5), new Angle(90, 'degrees')]);
+  const curves = ellipse.toCubicBezierCurves();
+  const firstStart = (curves[0].values as TCubicBezierAbsoluteValues)[0];
+  const expectedPoint = ellipse.computePointForTheta(new Angle(0, 'radians'));
+
+  expect(Calculator.isEqual(firstStart.x, expectedPoint.x)).toBe(true);
+  expect(Calculator.isEqual(firstStart.y, expectedPoint.y)).toBe(true);
+});
+
+// CLONE
 
 it('should produce an independent clone', () => {
   const phi = new Angle(90, 'degrees');

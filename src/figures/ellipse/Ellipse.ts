@@ -1,10 +1,21 @@
-import { Angle, Figure, IAngle, IMagnitude, IPoint, IVector, Point } from '@abstracts';
+import { Angle, Figure, IAngle, IMagnitude, IPoint, IVector, Point, Vector } from '@abstracts';
 import type { IEllipse, ILine, TEllipseCriticalPoints, TEllipseValues } from '@figures';
+import { CubicBezierCurve } from '../cubic-bezier-curve/CubicBezierCurve';
+import type { TEllipseCubicBezierCurves } from './Ellipse.types';
 import { IBoundingBox } from '@types';
 import { Calculator } from '@utilities/calculator';
 import { Line } from '../line/Line';
 
+const KAPPA = 0.5522847498307936;
+
 const xAxis = new Line([new Point([0, 0]), new Point([1, 0])]);
+
+const unitCircleCubicBezierCurves: TEllipseCubicBezierCurves = [
+  new CubicBezierCurve([new Point([1, 0]), new Point([1, KAPPA]), new Point([KAPPA, 1]), new Point([0, 1])]),
+  new CubicBezierCurve([new Point([0, 1]), new Point([-KAPPA, 1]), new Point([-1, KAPPA]), new Point([-1, 0])]),
+  new CubicBezierCurve([new Point([-1, 0]), new Point([-1, -KAPPA]), new Point([-KAPPA, -1]), new Point([0, -1])]),
+  new CubicBezierCurve([new Point([0, -1]), new Point([KAPPA, -1]), new Point([1, -KAPPA]), new Point([1, 0])])
+];
 
 export class Ellipse extends Figure implements IEllipse {
   private _center: IPoint;
@@ -113,6 +124,19 @@ export class Ellipse extends Figure implements IEllipse {
     this.recompute();
 
     return this;
+  }
+
+  public toCubicBezierCurves() {
+    const { rx, ry, phi, center } = this;
+    const curves: TEllipseCubicBezierCurves = unitCircleCubicBezierCurves.map((curve) => {
+      return curve
+        .clone()
+        .scaleXY(+rx, +ry)
+        .rotate(phi)
+        .translate(new Vector([center.x, center.y]));
+    }) as TEllipseCubicBezierCurves;
+
+    return curves;
   }
 
   public translate(vector: IVector): this {

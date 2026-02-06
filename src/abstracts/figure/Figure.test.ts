@@ -1,6 +1,7 @@
 import { Angle, TFigureValues, IMagnitude, IPoint, IVector, Figure, Point, Vector, Magnitude, Flag } from '@abstracts';
 import { Line } from '@figures';
-import { yAxis } from '@utilities';
+
+const yAxis = new Line([new Point([0, 0]), new Point([0, 1])]);
 
 class SpecificFigure extends Figure {
   constructor(values: TFigureValues) {
@@ -235,6 +236,64 @@ it('should scale correctly with magnitudes', () => {
   });
 
   expect(flatValues).toStrictEqual([[-6, 0], 16]);
+});
+
+// SCALE XY
+
+it('should scaleXY correctly with absolute values', () => {
+  const specificFigure = new SpecificFigure([new Point([0, 0]), new Point([6, 0]), new Point([3, 4])]);
+
+  specificFigure.scaleXY(2, 3);
+
+  const flatPointValues = specificFigure.values.map((point) => (point as IPoint).values);
+
+  expect(flatPointValues).toStrictEqual([
+    [0, 0],
+    [12, 0],
+    [6, 12]
+  ]);
+});
+
+it('should scaleXY correctly with absolute values about a point', () => {
+  const specificFigure = new SpecificFigure([new Point([2, 2]), new Point([4, 2]), new Point([4, 4])]);
+
+  specificFigure.scaleXY(3, 2, new Point([2, 2]));
+
+  const flatPointValues = specificFigure.values.map((point) => (point as IPoint).values);
+
+  expect(flatPointValues).toStrictEqual([
+    [2, 2],
+    [8, 2],
+    [8, 6]
+  ]);
+});
+
+it('should scaleXY correctly with relative values', () => {
+  const specificFigure = new SpecificFigure([new Point([0, 0]), new Vector([6, 0]), new Vector([3, 4])]);
+
+  specificFigure.scaleXY(2, 3);
+
+  const { values } = specificFigure;
+  const firstPoint = values[0];
+  const flatPointValues = values.map((value) => {
+    if (value instanceof Point) {
+      return value.values;
+    }
+
+    return firstPoint.clone().translate(value as IVector).values;
+  });
+
+  expect(flatPointValues).toStrictEqual([
+    [0, 0],
+    [12, 0],
+    [6, 12]
+  ]);
+});
+
+it('should throw when calling scaleXY with no points', () => {
+  const figure = new FigureWithNoPoints();
+
+  expect(() => figure.scaleXY(2, 3)).toThrow('Attempting to call scaleXY');
 });
 
 // TRANSLATE

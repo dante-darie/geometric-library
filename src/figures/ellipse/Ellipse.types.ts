@@ -1,9 +1,12 @@
 import { IAngle, IFigure, IMagnitude, IPoint } from '@abstracts';
+import { CubicBezierCurve, TCubicBezierValues } from '@figures/cubic-bezier-curve';
 import { IClonable } from '@types';
 
 export type TEllipseValues = [IPoint, IMagnitude, IMagnitude, IAngle];
 
 export type TEllipseCriticalPoints = [IPoint, IPoint, IPoint, IPoint];
+
+export type TEllipseCubicBezierCurves = [CubicBezierCurve, CubicBezierCurve, CubicBezierCurve, CubicBezierCurve];
 
 export interface IEllipse extends IFigure, IClonable<IEllipse> {
   readonly center: IPoint;
@@ -13,4 +16,5 @@ export interface IEllipse extends IFigure, IClonable<IEllipse> {
   readonly ry: IMagnitude;
   computePointForTheta(theta: IAngle): IPoint;
   computeThetaForPoint(point: IPoint): IAngle;
+  toCubicBezierCurves(): TEllipseCubicBezierCurves;
 }

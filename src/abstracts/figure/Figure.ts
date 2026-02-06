@@ -178,6 +178,27 @@ export abstract class Figure implements IFigure {
     return this;
   }
 
+  public scaleXY(factorX: number, factorY: number, about: IPoint = new Point([0, 0])): this {
+    const { points, vectors } = this;
+
+    if (!points) {
+      throw new Error(Figure.getNoPointsErrorMessage('scaleXY'));
+    }
+
+    points.forEach((point) => {
+      const scaledX = +Calculator.add(about.x, Calculator.sub(point.x, about.x).mul(factorX));
+      const scaledY = +Calculator.add(about.y, Calculator.sub(point.y, about.y).mul(factorY));
+
+      point.replace(new Point([scaledX, scaledY]));
+    });
+
+    vectors.forEach((vector) => {
+      vector.replace(new Vector([+Calculator.mul(vector.dx, factorX), +Calculator.mul(vector.dy, factorY)]));
+    });
+
+    return this;
+  }
+
   public translate(vector: IVector): this {
     const { points } = this;
 

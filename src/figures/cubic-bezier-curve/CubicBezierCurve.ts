@@ -85,6 +85,14 @@ export class CubicBezierCurve extends Figure implements ICubicBezierCurve {
     return this;
   }
 
+  public scaleXY(factorX: number, factorY: number, about?: IPoint): this {
+    super.scaleXY(factorX, factorY, about);
+
+    this.recompute();
+
+    return this;
+  }
+
   public translate(vector: IVector): this {
     super.translate(vector);
 

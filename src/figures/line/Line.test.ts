@@ -1,6 +1,8 @@
 import { Angle, Point, Vector } from '@abstracts';
 import { Line } from '@figures';
-import { xAxis, yAxis } from '@utilities';
+
+const xAxis = new Line([new Point([0, 0]), new Point([1, 0])]);
+const yAxis = new Line([new Point([0, 0]), new Point([0, 1])]);
 
 it('should assign the correct points and vector', () => {
   const line = new Line([new Point([1, 1]), new Point([3, 3])]);

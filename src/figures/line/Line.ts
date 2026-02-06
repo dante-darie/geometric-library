@@ -305,6 +305,14 @@ export class Line extends Figure implements ILine {
     return this;
   }
 
+  public scaleXY(factorX: number, factorY: number, about?: IPoint): this {
+    super.scaleXY(factorX, factorY, about);
+
+    this._dirty = true;
+
+    return this;
+  }
+
   public translate(vector: IVector): this {
     super.translate(vector);
 

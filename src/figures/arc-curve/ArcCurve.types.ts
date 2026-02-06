@@ -1,4 +1,5 @@
 import { IAngle, IFigure, IFlag, IMagnitude, IPoint, IVector } from '@abstracts';
+import type { CubicBezierCurve } from '../cubic-bezier-curve/CubicBezierCurve';
 import { IClonable } from '@types';
 
 export type TArcAbsoluteValues = [IPoint, IMagnitude, IMagnitude, IAngle, IFlag, IFlag, IPoint];
@@ -10,4 +11,5 @@ export type TArcValues = TArcAbsoluteValues | TArcRelativeValues;
 export interface IArcCurve extends IFigure, IClonable<IArcCurve> {
   readonly center: IPoint;
   readonly criticalPoints: IPoint[];
+  toCubicBezierCurves(): CubicBezierCurve[];
 }

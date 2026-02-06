@@ -12,5 +12,6 @@ export interface IFigure {
   reflect(about: IPoint | ILine): this;
   rotate(phi: IAngle, about?: IPoint): this;
   scale(factor: number, about?: IPoint): this;
+  scaleXY(factorX: number, factorY: number, about?: IPoint): this;
   translate(vector: IVector): this;
 }
