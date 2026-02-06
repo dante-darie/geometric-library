@@ -88,6 +88,9 @@ jobs:
     needs: release
     runs-on: ubuntu-latest
     if: needs.release.outputs.released == 'true'
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - name: Checkout latest release
         uses: actions/checkout@v4
@@ -107,6 +110,6 @@ jobs:
         run: npm run build
 
       - name: Publish
-        run: npm publish
+        run: npm publish --provenance
         env:
           NPM_REGISTRY_PAT: ${{ secrets.NPM_TOKEN }}

@@ -1,4 +1,4 @@
-import { Angle, IPoint, Magnitude, Point, Vector } from '@abstracts';
+import { Angle, Magnitude, Point, Vector } from '@abstracts';
 import { Ellipse, Line, TCubicBezierAbsoluteValues } from '@figures';
 import { Calculator } from '@utilities/calculator';
 

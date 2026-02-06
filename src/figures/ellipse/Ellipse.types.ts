@@ -1,5 +1,5 @@
 import { IAngle, IFigure, IMagnitude, IPoint } from '@abstracts';
-import { CubicBezierCurve, TCubicBezierValues } from '@figures/cubic-bezier-curve';
+import { CubicBezierCurve } from '@figures/cubic-bezier-curve';
 import { IClonable } from '@types';
 
 export type TEllipseValues = [IPoint, IMagnitude, IMagnitude, IAngle];

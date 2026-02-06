@@ -155,7 +155,7 @@ it('should approximate the arc midpoint accurately', () => {
 
   // First segment spans θ from π to 3π/2. Midpoint θ = 5π/4.
   // Ellipse point at θ=5π/4: center=(5,0), rx=5, ry=10, phi=0
-  const midTheta = 5 * Math.PI / 4;
+  const midTheta = (5 * Math.PI) / 4;
   const expectedX = +Calculator.add(5, Calculator.mul(5, Calculator.cos(midTheta)));
   const expectedY = +Calculator.mul(10, Calculator.sin(midTheta));
 
