@@ -1,4 +1,5 @@
 import { IFigure, IPoint, IVector } from '@abstracts';
+import type { ICubicBezierCurve } from '@figures';
 import { IClonable } from '@types';
 
 export type TQuadraticBezierAbsoluteValues = [IPoint, IPoint, IPoint];
@@ -7,4 +8,5 @@ export type TQuadraticBezierValues = TQuadraticBezierAbsoluteValues | TQuadratic
 
 export interface IQuadraticBezierCurve extends IFigure, IClonable<IQuadraticBezierCurve> {
   readonly criticalPoints: IPoint[];
+  toCubicBezierCurve(): ICubicBezierCurve;
 }

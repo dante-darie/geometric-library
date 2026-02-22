@@ -1,5 +1,5 @@
 import { Figure, IAngle, IPoint, IVector, Point } from '@abstracts';
-import type { ILine, IQuadraticBezierCurve, TQuadraticBezierValues } from '@figures';
+import { ILine, IQuadraticBezierCurve, TQuadraticBezierValues, CubicBezierCurve } from '@figures';
 import { IBoundingBox, TAxis, TAxii } from '@types';
 import { Calculator } from '@utilities/calculator';
 
@@ -83,6 +83,18 @@ export class QuadraticBezierCurve extends Figure implements IQuadraticBezierCurv
     this.recompute();
 
     return this;
+  }
+
+  public toCubicBezierCurve(): CubicBezierCurve {
+    const { P0, P1, P2 } = this;
+    const twoThirds = new Calculator(2).div(3);
+
+    const CP0 = P0.clone();
+    const CP1 = new Point([+Calculator.add(P0.x, twoThirds.mul(Calculator.sub(P1.x, P0.x))), +Calculator.add(P0.y, twoThirds.mul(Calculator.sub(P1.y, P0.y)))]);
+    const CP2 = new Point([+Calculator.add(P2.x, twoThirds.mul(Calculator.sub(P1.x, P2.x))), +Calculator.add(P2.y, twoThirds.mul(Calculator.sub(P1.y, P2.y)))]);
+    const CP3 = P2.clone();
+
+    return new CubicBezierCurve([CP0, CP1, CP2, CP3]);
   }
 
   public translate(vector: IVector): this {

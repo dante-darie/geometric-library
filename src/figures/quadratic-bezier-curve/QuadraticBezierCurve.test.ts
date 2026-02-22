@@ -1,5 +1,5 @@
 import { Angle, IPoint, Point, Vector } from '@abstracts';
-import { Line, QuadraticBezierCurve } from '@figures';
+import { Line, QuadraticBezierCurve, TCubicBezierValues } from '@figures';
 import { Calculator } from '@utilities';
 
 it('should correctly assign the given values', () => {
@@ -147,4 +147,18 @@ it('should return empty critical points when getPointAtParameter returns undefin
   quadraticCurve.recompute();
 
   expect(quadraticCurve.criticalPoints).toStrictEqual([]);
+});
+
+it('should correctly convert to a cubic bezier curve', () => {
+  const quadraticCurve = new QuadraticBezierCurve([new Point([0, 0]), new Point([5, 5]), new Point([10, 0])]);
+  const cubicCurve = quadraticCurve.toCubicBezierCurve();
+
+  const flatValues = (cubicCurve.values as TCubicBezierValues).map((point) => (point as IPoint).values);
+
+  expect(flatValues).toStrictEqual([
+    [0, 0],
+    [3.333333333333333, 3.333333333333333],
+    [6.666666666666667, 3.333333333333333],
+    [10, 0]
+  ]);
 });
