@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/dante-darie/geometric-library/compare/v1.5.0...v1.6.0) (2026-02-22)
+
+
+### Features
+
+* implemented quadratic to cubic conversion ([f061083](https://github.com/dante-darie/geometric-library/commit/f06108303363ec84a4fc056f3970a6bb0eafbc96))
+
 # [1.5.0](https://github.com/dante-darie/geometric-library/compare/v1.4.0...v1.5.0) (2026-02-06)
 
 
