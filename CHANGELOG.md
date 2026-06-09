@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/dante-darie/geometric-library/compare/v1.6.1...v1.6.2) (2026-06-09)
+
+
+### Bug Fixes
+
+* broken npm auth and oidc switch ([d9672cf](https://github.com/dante-darie/geometric-library/commit/d9672cf1c5f9bfc625f7c4f2981f50fb10246527))
+
 ## [1.6.1](https://github.com/dante-darie/geometric-library/compare/v1.6.0...v1.6.1) (2026-06-09)
 
 
