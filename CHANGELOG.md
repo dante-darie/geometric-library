@@ -1,3 +1,10 @@
+## [1.6.4](https://github.com/dante-darie/geometric-library/compare/v1.6.3...v1.6.4) (2026-06-09)
+
+
+### Bug Fixes
+
+* old npm and actions cause npm auth failure ([9ded9cb](https://github.com/dante-darie/geometric-library/commit/9ded9cb71d41808b5d2bdb1faab7222ceae18275))
+
 ## [1.6.3](https://github.com/dante-darie/geometric-library/compare/v1.6.2...v1.6.3) (2026-06-09)
 
 
