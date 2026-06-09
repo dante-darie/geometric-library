@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/dante-darie/geometric-library/compare/v1.6.0...v1.6.1) (2026-06-09)
+
+
+### Bug Fixes
+
+* various vulnerabilities ([4f3d511](https://github.com/dante-darie/geometric-library/commit/4f3d51166a55610cf69051bb05ff687676b1e1e5))
+
 # [1.6.0](https://github.com/dante-darie/geometric-library/compare/v1.5.0...v1.6.0) (2026-02-22)
 
 
