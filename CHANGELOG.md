@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/dante-darie/geometric-library/compare/v1.6.2...v1.6.3) (2026-06-09)
+
+
+### Bug Fixes
+
+* broken npmrc with old auth ([4299b76](https://github.com/dante-darie/geometric-library/commit/4299b7609d2c0aba70c31d9ac438c2f8cc802b97))
+
 ## [1.6.2](https://github.com/dante-darie/geometric-library/compare/v1.6.1...v1.6.2) (2026-06-09)
 
 
