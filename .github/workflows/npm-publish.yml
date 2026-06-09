@@ -111,5 +111,3 @@ jobs:
 
       - name: Publish
         run: npm publish --provenance
-        env:
-          NPM_REGISTRY_PAT: ${{ secrets.NPM_TOKEN }}
